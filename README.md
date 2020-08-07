@@ -14,17 +14,18 @@ We release the code of [EPI-based Oriented Relation Networks for Light Field Dep
 
 ## Installation
 
-[Python 2.7](https://www.anaconda.com/distribution/) 
+[Python 3.6](https://www.anaconda.com/distribution/) 
 
-[Caffe](https://caffe.berkeleyvision.org/)
+[Kreas](https://keras.io/)
 
-[Matlab 2016b](https://www.mathworks.com/products/matlab.html)
+[Matlab 2014b](https://www.mathworks.com/products/matlab.html)
 
-Do the following two steps to make sure that .m files can be used in Python:
-- `cd matlabroot/extern/engines/python` 
-- `python setup.py`
-
-Note: matlabroot is the root directory of MATLAB in your system.
+`im_refocus.m` requires MATLAB along with a C++ compiler configured to work with MATLAB's `mex` command, the last is required for building the `refocus.mexw64` MEX function. You can check that a compiler is properly configured by executing:
+```
+>> mex -setup C++
+```
+from the MATLAB command prompt.
+- `mex refocus.c` 
 
 ## Data
 
@@ -39,3 +40,19 @@ Each scene has 9 × 9 angular resolution and 512 × 512 spatial resolution. 16 s
 We extract EPIs from the light field as input. The proposed network predicts the depth of the center pixel from the pair of EPI patches.
 We randomly sample the horizontal and vertical EPI patch pairs of size 9 × 29 × 3 from each scene as inputs.
 <div align=center><img src="https://github.com/lkyahpu/EPI_ORM/raw/master/images/EPI.png" width="700" height="400" /></div>
+
+### Data pre-processing
+
+* Put the micro-lens image arrays into [data/original_data/](/data/original_data) and ground-truths into [data/original_GT/](/data/original_GT).
+
+* Run `python augment.py` for data augmentation.
+
+* Convert GTs to the labels that can be entered into the Caffe network by running
+
+   `python convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
+
+* Copy the labels to the [val/annotations/](	/data/val/annotations/):
+`cp ./data/train/annotations/* ./data/val/annotations/`
+
+* Copy the original images to the [val/JPGImages/](/data/val/JPGImages/):
+`cp ./data/original_data/* ./data/val/JPGImages/`
