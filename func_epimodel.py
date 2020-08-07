@@ -205,16 +205,14 @@ def define_epi(sz_input,sz_input2,filt_num,learning_rate):
     return model_512
   
   
+if __name__ == "__main__":
+ filt_num=128
+ learning_rate=0.1**4
 
-filt_num=128
-learning_rate=0.1**4
+ sz_input=9
+ sz_input2=29
 
-sz_input=9
-sz_input2=29
-
-model=define_epi(sz_input,sz_input2,filt_num,learning_rate)
-
-                        
-#plot_model(model, to_file='model_test.png',show_shapes=True)
-
-print(model.summary())
+ model=define_epi(sz_input,sz_input2,filt_num,learning_rate)
+                     
+ #plot_model(model, to_file='model_test.png',show_shapes=True)
+ print(model.summary())
