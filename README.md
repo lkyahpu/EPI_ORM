@@ -94,4 +94,9 @@ of IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 4748
 
 ## TODO
 Code for training release  
-    
+
+## Contact
+
+[Kunyuan Li](mailto:lkyhfut@gmail.com),  [Jun Zhang](mailto:zhangjun1126@gmail.com)
+
+Questions can also be left as issues in the repository. We will be happy to answer them.
