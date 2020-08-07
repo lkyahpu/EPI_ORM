@@ -4,12 +4,12 @@ We release the code of [EPI-based Oriented Relation Networks for Light Field Dep
 
 ## Overall network
 
-<div align=center><img src ="https://github.com/lkyahpu/EPI_ORM/raw/master/images/network.png" /></div>
-<font size=2> The proposed network architecture.
+<div align=center><img src ="https://github.com/lkyahpu/EPI_ORM/raw/master/images/network.png" width="800" height="400"/></div>
+<font size=2>The proposed network architecture.
 
 ## The proposed oriented relation module 
 
-<div align=center><img src ="https://github.com/lkyahpu/EPI_ORM/raw/master/images/ORM.png" /></div>
+<div align=center><img src ="https://github.com/lkyahpu/EPI_ORM/raw/master/images/ORM.png" width="800" height="200"/></div>
 <font size=2> The architecture of ORM. 
 
 ## Installation
@@ -38,4 +38,4 @@ We randomly sample the horizontal and vertical EPI patch pairs of size 9 Ã— 29 Ã
 ### EPIs from the light field
 
 We extract EPIs from the light field as input. The proposed network predicts the depth of the center pixel from the pair of EPI patches.
-<div align=center><img src="https://github.com/lkyahpu/EPI_ORM/raw/master/images/EPI.png" width="800" height="500" /></div>
+<div align=center><img src="https://github.com/lkyahpu/EPI_ORM/raw/master/images/EPI.png" width="700" height="400" /></div>
