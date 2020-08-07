@@ -54,7 +54,7 @@ We randomly sample the horizontal and vertical EPI patch pairs of size 9 Ã— 29 Ã
 * Put the light field data into [hci_dataset/](/hci_dataset/):
 
 You need to download HCI Light field dataset from http://hci-lightfield.iwr.uni-heidelberg.de/.
-Unzip the LF dataset and move ` additional/, training/, test/, stratified/ ` into the `hci_dataset/`.
+Unzip the LF dataset and move `additional/, training/, test/, stratified/ ` into the `hci_dataset/`.
 
 ```
 |-- hci_dataset
@@ -71,10 +71,10 @@ Unzip the LF dataset and move ` additional/, training/, test/, stratified/ ` int
 
 * The pretrained models are provided in the repo. 
 
-* Run `python ./EPI_test/test_LF.py` to test and save the test results, you need to modify the line 35 like below 
+* Run `python EPI_test/test_LF.py` to test and save the test results, you need to modify the line 35 like below 
 `valdata_fill_x ,valdata_fill_y ,numy,numx= read_pinhole_LF(9,9,'E:/LKY/dataset/benchmark/cotton')`
 
-* Run `python ./func_epimodel.py` to obtain the network information.
+* Run `python func_epimodel.py` to obtain the network information.
 
 ## Results
 
