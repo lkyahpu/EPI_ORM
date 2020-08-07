@@ -16,16 +16,16 @@ We release the code of [EPI-based Oriented Relation Networks for Light Field Dep
 
 [Python 3.6](https://www.anaconda.com/distribution/) 
 
-[Kreas](https://keras.io/)
+[Kreas 2.1.6 ](https://keras.io/)
 
 [Matlab 2014b](https://www.mathworks.com/products/matlab.html)
 
 `im_refocus.m` requires MATLAB along with a C++ compiler configured to work with MATLAB's `mex` command, the last is required for building the `refocus.mexw64` MEX function. You can check that a compiler is properly configured by executing:
 ```
 >> mex -setup C++
+>> mex refocus.c 
 ```
 from the MATLAB command prompt.
-- `mex refocus.c` 
 
 ## Data
 
