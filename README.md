@@ -51,16 +51,15 @@ We randomly sample the horizontal and vertical EPI patch pairs of size 9 Ã— 29 Ã
 
 ### Data pre-processing
 
-* Put the micro-lens image arrays into [data/original_data/](/data/original_data) and ground-truths into [data/original_GT/](/data/original_GT).
+* Put the light field data into [hci_dataset/](/hci_dataset/):
+```
+|-- hci_dataset
+    |-- additional
+    |-- stratified
+    |-- training
+    |-- test
+```
 
-* Run `python augment.py` for data augmentation.
+* Run `im_refocus.m` for data augmentation.
 
-* Convert GTs to the labels that can be entered into the Caffe network by running
 
-   `python convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
-
-* Copy the labels to the [val/annotations/](	/data/val/annotations/):
-`cp ./data/train/annotations/* ./data/val/annotations/`
-
-* Copy the original images to the [val/JPGImages/](/data/val/JPGImages/):
-`cp ./data/original_data/* ./data/val/JPGImages/`
