@@ -52,6 +52,9 @@ We randomly sample the horizontal and vertical EPI patch pairs of size 9 × 29 �
 ### Data pre-processing
 
 * Put the light field data into [hci_dataset/](/hci_dataset/):
+You need to download HCI Light field dataset from http://hci-lightfield.iwr.uni-heidelberg.de/.
+Unzip the LF dataset and move 'additional/, training/, test/, stratified/ ' into the 'hci_dataset/'.
+
 ```
 |-- hci_dataset
     |-- additional
@@ -93,7 +96,7 @@ on Neural Information Processing, pages 642–652, 2017.
 of IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 4748–4757, 2018.
 
 ## TODO
-Code for training release  
+Training code release  
 
 ## Contact
 
