@@ -62,4 +62,19 @@ We randomly sample the horizontal and vertical EPI patch pairs of size 9 Ã— 29 Ã
 
 * Run `im_refocus.m` for data augmentation.
 
+## Test
 
+* The pretrained models are provided in the repo. 
+
+* Run `python ./EPI_test/test_LF.py` to test and save the test results.
+
+* Run `python ./func_epimodel.py` to obtain the network information.
+
+## Results
+
+Qualitative results on the 4D light field benchmark [7]. For each scene, the top row shows the estimated disparity maps and the bottom row shows the error maps for BadPix.
+(a) Ground truth. (b) LF [1]. (c) CAE [2]. (d) LF_OCC [3]. (e) SPO [4]. (f) EPN [5]. (g)EPINET [6]. (h) Ours.
+<div style="text-align:center"><img src ="https://github.com/lkyahpu/EPI_ORM/raw/master/images/qualitative-results.png" /></div>
+<font size=2> Visual comparison of ours and other state-of-the-art methods on the 4D light field benchmark.
+    
+    
