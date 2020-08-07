@@ -66,7 +66,8 @@ We randomly sample the horizontal and vertical EPI patch pairs of size 9 × 29 �
 
 * The pretrained models are provided in the repo. 
 
-* Run `python ./EPI_test/test_LF.py` to test and save the test results.
+* Run `python ./EPI_test/test_LF.py` to test and save the test results, you need to modify the line 35 like below 
+`valdata_fill_x ,valdata_fill_y ,numy,numx= read_pinhole_LF(9,9,'E:/LKY/dataset/benchmark/cotton')`
 
 * Run `python ./func_epimodel.py` to obtain the network information.
 
@@ -77,4 +78,20 @@ Qualitative results on the 4D light field benchmark [7]. For each scene, the top
 <div align=center><img src ="https://github.com/lkyahpu/EPI_ORM/raw/master/images/qualitative-results.png" width="700" height="800"/></div>
 <font size=2> Visual comparison of ours and other state-of-the-art methods on the 4D light field benchmark.
     
+## References
+1. H. Jeon, J. Park, G. Choe, J. Park, Y. Bok, Y. Tai, and I. S. Kweon. Accurate depth map estimation from a lenslet light field camera. In Proceedings of IEEE Conference
+on Computer Vision and Pattern Recognition (CVPR), pages 1547–1555, 2015.
+2. W. Williem and I. K. Park. Robust light field depth estimation for noisy scene with occlusion. In Proceedings of IEEE Conference on Computer Vision and Pattern Recognition
+(CVPR), pages 4396–4404, 2016.
+3. T.-C. Wang, A. Efros, and R. Ramamoorthi. Occlusion-aware depth estimation using light-field cameras. In Proceedings of International Conference on Computer Vision
+(ICCV), pages 3487–3495, 2015.
+4. S. Zhang, H. Sheng, C. Li, J. Zhang, and Z. Xiong. Robust depth estimation for light field via spinning parallelogram operator. Computer Vision and Image Understanding
+(CVIU), 145:148–159, 2016.
+5. Y. Luo, W. Zhou, J. Fang, L. Liang, H. Zhang, and G. Dai. Epi-patch based convolutional neural network for depth estimation on 4d light field. In International Conference
+on Neural Information Processing, pages 642–652, 2017.
+6. C. Shin, H. Jeon, Y. Yoon, I. S. Kweon, and S. J. Kim. Epinet: A fully-convolutional neural network using epipolar geometry for depth from light field images. In Proceedings
+of IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 4748–4757, 2018.
+
+## TODO
+Code for training release  
     
