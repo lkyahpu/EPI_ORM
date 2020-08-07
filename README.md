@@ -64,7 +64,8 @@ Unzip the LF dataset and move ` additional/, training/, test/, stratified/ ` int
     |-- test
 ```
 
-* Run `im_refocus.m` for data augmentation.
+* Run `im_refocus.m` for data augmentation. Data will be saved `ref_aug/output_ref/XX/XX_ref_alpha.png` (XX is the scene, `alpha` is the disparity shift). 
+* You might be change the setting line 96 `index=1:10` to change the number of refocusing.
 
 ## Test
 
