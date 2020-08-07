@@ -14,42 +14,17 @@ xRes = 512;
 yRes = 512;
 uRes = 9;
 vRes = 9;
+num_ref=1
+out_path=['../','output_ref','/'];
+mkdir(out_path);
 
-
-for n=23
-    parameter.name=scene{n};
-    %output_path1 = ['G:/LKY/专利/code_matlab/',parameter.name,'/'];
-    %mkdir(output_path1);
-    
-    output_path = ['G:/LKY/专利/code_matlab/',parameter.name,'/','refocus_5','/'];
+for n=1:16
+    parameter.name=scene{n};    
+    output_path = [out_path,parameter.name,'/'];
     mkdir(output_path);
     
     name=parameter.name;
-    % if strcmp(name,'pyramids');
-    %     begin=-1.7; stop=1.2;
-    % end
-    % if strcmp(name,'backgammon');
-    %     begin=-1.7; stop=0.7;
-    % end
-    % if strcmp(name,'stripes');
-    %     begin=-0.3; stop=0.6;
-    % end
-    % if strcmp(name,'dots');
-    %     begin=-0.7; stop=0.9;
-    % end
-    % if strcmp(name,'boxes');
-    %     begin=-2.2; stop=1.4;
-    % end
-    % if strcmp(name,'cotton');
-    %     begin=-1.6; stop=1.5;
-    % end
-    % if strcmp(name,'dino');
-    %     begin=-1.9; stop=1.9;
-    % end
-    % if strcmp(name,'sideboard');
-    %     begin=-2.0; stop=1.7;
-    % end
-
+ 
     switch  name
         case 'pyramids'
             begin=-1.7; stop=1.2;
@@ -103,10 +78,8 @@ for n=23
     end
 
     depth_resolution =parameter.depth_resolution;
-
     
     input_string = strcat([name,'/'],strcat(name,'.png'));    % input path
-
     begin_temp=-stop;
     stop_temp=-begin;
     delta=(stop_temp-begin_temp)/(depth_resolution-1);
@@ -120,7 +93,7 @@ for n=23
     LF_Remap=double(imread(input_string));
     LF_Remap_alpha=zeros(LF_y_size,LF_x_size,3);
 
-    for index=10:10
+    for index=1:10
         alpha = stop_temp+delta-index*delta;
         %alpha = 0.3;
         IM_Refoc_alpha = zeros(yRes,xRes,3);
@@ -131,7 +104,7 @@ for n=23
         %imwrite(IM_Refoc_alpha,strcat(output_path,[name,'_refocus_',num2str(alpha),'.png']));
         %centr_Refoc_alpha=im2double(pinhole_img(LF_Remap_alpha,yRes,xRes,5,5));
 
-        imwrite(LF_Remap_alpha/255,strcat(output_path,[name,'_ref_',num2str(double(alpha)),'_','.png']));
+        imwrite(LF_Remap_alpha/255,strcat(output_path,[name,'_ref_',num2str(double(alpha)),'.png']));
         %imwrite(LF_Remap_alpha/255,strcat(output_path,[name,'_ref_','06','.png']));
     end
     disp([scene{n},' ','finished'])
