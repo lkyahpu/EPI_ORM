@@ -43,13 +43,13 @@ We use the [4D light field benchmark](https://lightfield-analysis.uni-konstanz.d
 The dataset includes 24 carefully designed scenes with ground-truth disparity maps.
 Each scene has 9 × 9 angular resolution and 512 × 512 spatial resolution. 16 scenes are used for training and the remaining 8 scenes for testing.
 
-### EPIs from the light field
+### EPIs from the Light Field
 
 We extract EPIs from the light field as input. The proposed network predicts the depth of the center pixel from the pair of EPI patches.
 We randomly sample the horizontal and vertical EPI patch pairs of size 9 × 29 × 3 from each scene as inputs.
 <div align=center><img src="https://github.com/lkyahpu/EPI_ORM/raw/master/images/EPI.png" width="700" height="400" /></div>
 
-### Data pre-processing
+### Data Augmentation
 
 * Put the light field data into [hci_dataset/](/hci_dataset/):
 
