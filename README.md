@@ -67,6 +67,13 @@ Unzip the LF dataset and move `additional/, training/, test/, stratified/ ` into
 * Run `im_refocus.m` for data augmentation. Data will be saved `ref_aug/output_ref/XX/XX_ref_alpha.png` (XX is the scene, `alpha` is the disparity shift). 
 * You might be change the setting line 96 `index=1:10` to change the number of refocusing.
 
+## train
+
+* Run `python epi_train.py` to train our model, you need to modify the line 208 like below 
+`dir_LFimages  = ['hci_dataset/additional/'+LFimage for LFimage in os.listdir('/hci_dataset/additional') if LFimage != 'license.txt']`
+
+* Run `save_load_loss.py` to plot the loss curve.
+
 ## Test
 
 * The pretrained models are provided in the repo. 
