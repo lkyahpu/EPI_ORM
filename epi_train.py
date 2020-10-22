@@ -215,7 +215,7 @@ if __name__ == '__main__':
     
     #dir_LFimages1=['training/boxes', 'training/cotton', 'training/dino', 'training/sideboard']
     #dir_LFimages1=['E:/LKY/practice/EPI_ALL_REG_1/hci_dataset/'+LFimage for LFimage in dir_LFimages1]
-    dir_LFimages1=['/media/lky/文档/LKY/github/epinet-master/hci_dataset/training/cotton']
+    dir_LFimages1=['hci_dataset/training/cotton']
 
     valdata_fill_x, valdata_fill_y, valdata_label=generate_valdata(dir_LFimages1)
     #imageio.imsave('label.png', valdata_label)
