@@ -205,7 +205,7 @@ if __name__ == '__main__':
     
     print('Load training data...')
     
-    dir_LFimages  = ['/media/lky/文档/LKY/github/epinet-master/hci_dataset/additional/'+LFimage for LFimage in os.listdir('/media/lky/文档/LKY/github/epinet-master/hci_dataset/additional') if LFimage != 'license.txt']
+    dir_LFimages  = dir_LFimages  = ['hci_dataset/additional/'+LFimage for LFimage in os.listdir('/hci_dataset/additional') if LFimage != 'license.txt']
 
     traindata_x, traindata_y, traindata_label = load_LFdata(dir_LFimages)
 
