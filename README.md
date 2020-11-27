@@ -18,7 +18,7 @@ We release the code of [EPI-based Oriented Relation Networks for Light Field Dep
 
 [Anaconda 4.2.0 (64-bit)](https://www.anaconda.com/distribution/)
 
-[Kreas 2.1.6 ](https://keras.io/)
+[Kreas 2.2.4 ](https://keras.io/)
 
 [Matlab 2014b](https://www.mathworks.com/products/matlab.html)
 ```
