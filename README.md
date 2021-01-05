@@ -104,8 +104,17 @@ on Neural Information Processing, pages 642–652, 2017.
 6. C. Shin, H. Jeon, Y. Yoon, I. S. Kweon, and S. J. Kim. Epinet: A fully-convolutional neural network using epipolar geometry for depth from light field images. In Proceedings
 of IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 4748–4757, 2018.
 
-## TODO
-Training code release  
+## Paper and Citation
+The [paper](https://arxiv.org/pdf/2007.04538.pdf) was published at [BMVC 2020](https://www.bmvc2020-conference.com/) with an oral presentation ([project page](https://www.bmvc2020-conference.com/conference/papers/paper_0096.html)).
+
+```bibtex
+@inproceedings{2020EPI,
+  title={EPI-based Oriented Relation Networks for Light Field Depth Estimation},
+  author={ Li, Kunyuan  and  Zhang, Jun  and  Sun, Rui  and  Zhang, Xudong  and  Gao, Jun },
+  booktitle={British Machine Vision Conference (BMVC)},
+  year={2020},
+}
+```
 
 ## Contact
 
