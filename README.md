@@ -105,7 +105,7 @@ on Neural Information Processing, pages 642–652, 2017.
 of IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 4748–4757, 2018.
 
 ## Paper and Citation
-The [paper](https://arxiv.org/pdf/2007.04538.pdf) was published at [BMVC 2020](https://www.bmvc2020-conference.com/) with an oral presentation ([project page](https://www.bmvc2020-conference.com/conference/papers/paper_0096.html)).
+The [paper](https://arxiv.org/pdf/2007.04538.pdf) was published at [BMVC 2020](https://www.bmvc2020-conference.com/) with an oral presentation.
 
 ```bibtex
 @inproceedings{2020EPI,
